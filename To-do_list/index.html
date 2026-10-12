@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My To-Do List 📝</h1>
+        <p class="subtitle">Organize your day, one task at a time.</p>
+
+        <form id="todo-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Enter a new task..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="active">Active</button>
+            <button class="filter" data-filter="completed">
+                Completed
+            </button>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <div class="footer">
+            <span id="task-count">0 tasks left</span>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+    </div>
+    
+<div class="json-actions">
+    <button type="button" id="export-json">Export JSON</button>
+
+    <button type="button" id="import-json">
+        Import JSON
+    </button>
+
+    <input
+        type="file"
+        id="json-file"
+        accept=".json,application/json"
+        hidden
+    >
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
